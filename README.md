@@ -18,6 +18,7 @@
 - **Filesystem:** ext4
 - **Bootloader:** Limine
 - **GPU driver:** NVIDIA proprietary
+- **AUR helper:** paru
 
 ## Kernel Parameters
 
