@@ -31,6 +31,8 @@
 ## Boot customization
 
 - Turned off limine boot menu with `timeout: 1` and `quiet: yes` in `/boot/limine.conf`
+- Disabled `NetworkManager-wait-online.service` (using ~6 seconds of boot time, unknown if in parallel or not)
+- Set plymouth theme to dotLock (See other themes [here](https://www.gnome-look.org/browse?cat=108&page=1&ord=rating))
 
 ## Notes
 
