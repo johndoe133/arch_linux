@@ -33,7 +33,7 @@
 - Turned off limine boot menu with `timeout: 1` and `quiet: yes` in `/boot/limine.conf`
 - Disabled `NetworkManager-wait-online.service` (using ~6 seconds of boot time, unknown if in parallel or not)
 - Set plymouth theme to spin (See other themes [here](https://www.gnome-look.org/browse?cat=108&page=1&ord=rating) or [here is better](https://github.com/adi1090x/plymouth-themes))
-
+- changed modules to: `MODULES=(amdgpu)` and hooks to `HOOKS=(base systemd plymouth autodetect microcode modconf kms keyboard sd-vconsole block filesystems fsck)` to avoid black screen between ROG and plymouth boot screens. 
 ## Notes
 
 - Fast Boot disabled in UEFI to allow USB boot
