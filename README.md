@@ -28,6 +28,10 @@
 
 - **Brightness overflow at 100%** — driver wraps brightness value to 0 at max. Fixed with `dcdebugmask` kernel param above. Remove when fixed upstream.
 
+## Boot customization
+
+- Turned off limine boot menu with `timeout: 1` and `quiet: yes` in `/boot/limine.conf`
+
 ## Notes
 
 - Fast Boot disabled in UEFI to allow USB boot
