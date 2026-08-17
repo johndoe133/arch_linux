@@ -38,6 +38,12 @@
 MODULES=()
 HOOKS=(base systemd autodetect microcode kms modconf block keyboard sd-vconsole plymouth filesystems fsck)
 ```
+
+## Ricing/theming
+
+- **Theme:** Otto (appearance settings only, not desktop and window layout)
+- **Icons:** Tela (looks so clean)
+
 ## Notes
 
 - Fast Boot enabled in UEFI
