@@ -42,6 +42,7 @@ HOOKS=(base systemd autodetect microcode kms modconf block keyboard sd-vconsole 
 
 - **Theme:** Otto (appearance settings only, not desktop and window layout)
 - **Icons:** Tela (looks so clean)
+- **Window decorations:** Nordic (more intuitive than Otto, but might go back)
 - **Boot splash:**  Spin (See other plymouth themes [here](https://www.gnome-look.org/browse?cat=108&page=1&ord=rating) or [here is better](https://github.com/adi1090x/plymouth-themes))
 - **Splash screen:** Animation Shows after booting when you first log in. Currently set to none to avoid excessive loading menus on boot. 
 
