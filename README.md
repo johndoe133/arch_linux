@@ -32,7 +32,6 @@
 
 - Turned off limine boot menu with `timeout: 0` in `/boot/limine.conf` and `quiet: yes` in `/etc/default/limine`
 - Disabled `NetworkManager-wait-online.service` (using ~6 seconds of boot time, unknown if in parallel or not)
-- Set plymouth theme to spin (See other themes [here](https://www.gnome-look.org/browse?cat=108&page=1&ord=rating) or [here is better](https://github.com/adi1090x/plymouth-themes))
 - changed modules to: `MODULES=(amdgpu)` and hooks to `HOOKS=(base systemd plymouth autodetect microcode modconf kms keyboard sd-vconsole block filesystems fsck)` to avoid black screen between ROG and plymouth boot screens. Didn't work, revert to:
 ```
 MODULES=()
@@ -43,6 +42,8 @@ HOOKS=(base systemd autodetect microcode kms modconf block keyboard sd-vconsole 
 
 - **Theme:** Otto (appearance settings only, not desktop and window layout)
 - **Icons:** Tela (looks so clean)
+- **Boot splash:**  Spin (See other plymouth themes [here](https://www.gnome-look.org/browse?cat=108&page=1&ord=rating) or [here is better](https://github.com/adi1090x/plymouth-themes))
+- **Splash screen:** Animation Shows after booting when you first log in. Currently set to `Magna-Splash-6`
 
 ## Notes
 
