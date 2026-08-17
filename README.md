@@ -40,5 +40,5 @@ HOOKS=(base systemd autodetect microcode kms modconf block keyboard sd-vconsole 
 ```
 ## Notes
 
-- Fast Boot disabled in UEFI to allow USB boot
+- Fast Boot enabled in UEFI
 - UEFI GPU mode set to Switchable Graphics (not discrete-only)
