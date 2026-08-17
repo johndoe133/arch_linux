@@ -49,3 +49,6 @@ HOOKS=(base systemd autodetect microcode kms modconf block keyboard sd-vconsole 
 
 - Fast Boot enabled in UEFI
 - UEFI GPU mode set to Switchable Graphics (not discrete-only)
+
+## Temporary packages
+- hwinfo (3.4mb)
