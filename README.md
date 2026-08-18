@@ -9,6 +9,7 @@
 - **Storage:** 1TB NVMe SSD
 - **Display:** 15.6" QHD
 - **Boot mode:** UEFI only
+- **Battery:** 90WH at 72% health
 
 ## OS & Desktop
 
