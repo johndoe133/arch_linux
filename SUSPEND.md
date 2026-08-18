@@ -369,3 +369,26 @@ Two things worth flagging before you file this away:
 **§15.11 is unverified.** The `D3cold` vs `D3hot` check and the `runtime_suspended_time` growth check are the ones that actually confirm the fix is doing what we think — `suspended` alone doesn't distinguish "powered down" from "partially powered." Worth running before tonight's test so the overnight numbers have a clean interpretation.
 
 **Two Session 1 items are still open and unrelated to battery:** the pending `fsck` after those two forced power-offs, and the lost KDE splash setting. Neither is urgent, but the `fsck` has been outstanding for a day now.
+
+
+# §16 — Addendum: Items Omitted from §15
+
+## 16.1 Decision Context — Why a Reversible Script (Not System-Wide)
+
+Before applying the KWin fix, use-case was confirmed directly:
+
+| Question | Answer |
+|---|---|
+| External display used? | Yes, occasionally |
+| Port used | **Always HDMI** in practice; "might wish to do usb-c [someday]. No big loss if I lose that capability though" |
+| dGPU use case | **Gaming** |
+
+Combined with the GA503 wiring finding (§15.5 — HDMI→iGPU, USB-C→dGPU), this confirmed HDMI use is completely unaffected by the fix, and justified the **session-script approach over `/etc/environment`**: if USB-C dGPU output is ever wanted later, the fix is undone by deleting one file rather than editing a system-wide config.
+
+## 16.2 Gaming / dGPU-on-demand Reference (for future use)
+
+PRIME render offload remains fully independent of the KWin restriction — confirmed as the mechanism that lets the dGPU still be used deliberately:
+
+```bash
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only %command%
+```
