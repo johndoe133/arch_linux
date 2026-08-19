@@ -20,6 +20,7 @@
 - **Bootloader:** Limine
 - **GPU driver:** NVIDIA proprietary
 - **AUR helper:** paru
+- **SSH IP:** ekj@192.168.1.220
 
 ## Kernel Parameters
 
