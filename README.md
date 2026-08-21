@@ -32,7 +32,7 @@
 ## Ricing/theming
 
 - **Theme:** Otto (appearance settings only, not desktop and window layout)
-- **Icons:** Tela (looks so clean)
+- **Icons:** Tela (download through `aur` so permissions are there even when logged out and icons can render)
 - **Window decorations:** Willow-dark (to be more similar to steam and firefox decorators that can't be changed)
 - **Boot splash:**  Spin (See other plymouth themes [here](https://www.gnome-look.org/browse?cat=108&page=1&ord=rating) or [here is better](https://github.com/adi1090x/plymouth-themes))
 - **Splash screen:** Animation Shows after booting when you first log in. Currently set to none to avoid excessive loading menus on boot. 
