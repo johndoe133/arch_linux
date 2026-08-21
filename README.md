@@ -36,4 +36,6 @@
 - **Window decorations:** Willow-dark (to be more similar to steam and firefox decorators that can't be changed)
 - **Boot splash:**  Spin (See other plymouth themes [here](https://www.gnome-look.org/browse?cat=108&page=1&ord=rating) or [here is better](https://github.com/adi1090x/plymouth-themes))
 - **Splash screen:** Animation Shows after booting when you first log in. Currently set to none to avoid excessive loading menus on boot. 
-- **Wallpaper:** Use [wallhaven](https://wallhaven.cc) toplist for a year. 
+- **Wallpaper:** Use [wallhaven](https://wallhaven.cc) toplist for a year.
+- **Lock screen:** Set to same image under "Screen Locking" settings.
+- **Login screen:** Set to same image under "Login Screen" settings.
