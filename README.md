@@ -8,7 +8,7 @@
 - **RAM:** 16GB
 - **Storage:** 1TB NVMe SSD
 - **Display:** 15.6" QHD
-- **Boot mode:** UEFI only
+- **Boot mode:** UEFI only, secure boot off
 - **Battery:** 90WH at 72% health
 
 ## OS & Desktop
@@ -20,42 +20,11 @@
 - **Bootloader:** Limine
 - **GPU driver:** NVIDIA proprietary
 - **AUR helper:** paru
-- **SSH IP:** ekj@192.168.1.220
 
-## Kernel Parameters
-
-- `amdgpu.dcdebugmask=0x40000` — fixes brightness overflow bug at 99-100% (AMDGPU regression)
-
-## Known Issues & Workarounds
-
-- **Brightness overflow at 100%** — driver wraps brightness value to 0 at max. Fixed with `dcdebugmask` kernel param above. Remove when fixed upstream.
-
-## Boot customization
-
-- Turned off limine boot menu with `timeout: 0` in `/boot/limine.conf` and `quiet: yes` in `/etc/default/limine`
-- Disabled `NetworkManager-wait-online.service` (using ~6 seconds of boot time, unknown if in parallel or not)
-- changed modules to: `MODULES=(amdgpu)` and hooks to `HOOKS=(base systemd plymouth autodetect microcode modconf kms keyboard sd-vconsole block filesystems fsck)` to avoid black screen between ROG and plymouth boot screens. Didn't work, revert to:
-```
-MODULES=()
-HOOKS=(base systemd autodetect microcode kms modconf block keyboard sd-vconsole plymouth filesystems fsck)
-```
-
-## Ricing/theming
-
-- **Theme:** Otto (appearance settings only, not desktop and window layout)
-- **Icons:** Tela (looks so clean)
-- **Window decorations:** Willow-dark (to be more similar to steam and firefox decorators that can't be changed)
-- **Boot splash:**  Spin (See other plymouth themes [here](https://www.gnome-look.org/browse?cat=108&page=1&ord=rating) or [here is better](https://github.com/adi1090x/plymouth-themes))
-- **Splash screen:** Animation Shows after booting when you first log in. Currently set to none to avoid excessive loading menus on boot. 
-- **Wallpaper:** Use [wallhaven](wallhaven.cc) toplist. 
-## Other customization
-
-- **Screenshotting:** Disabled super+shift+s shortcut for spectacle and enabled auto-select ('Accept on click-and-release'), then made a custom shortcut for super+shift+s that does the command `spectacle -r -b -c` which captures selection, adds to clipboard, and closes spectacle. 
-
-## Notes
-
-- Fast Boot enabled in UEFI
-- UEFI GPU mode set to Switchable Graphics (not discrete-only)
-
-## Temporary packages
-- hwinfo (3.4mb)
+## Boot options
+- **Brightness wrap-around issue:** adding `amdgpu.dcdebugmask=0x40000` to the `KERNEL_CMDLINE` options in `/etc/default/limine` fixes this. Backup saved in `.bak` file.
+- **Secure boot:** Off
+- **limine.conf:** Changed several options in `/boot/limine.conf` with a backup in `bak` for faster/better boot
+  - **Limine timeout:** Set to 1 in 
+  - **Limine quiet mode:** Also added `quiet: yes` to the conf file.
+  - **remember last entry:** `remember_last_entry` set to yes for now. Changing would involve more changes to ensure the latest kernel is default. 
