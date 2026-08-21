@@ -39,3 +39,7 @@
 - **Wallpaper:** Use [wallhaven](https://wallhaven.cc) toplist for a year.
 - **Lock screen:** Set to same image under "Screen Locking" settings.
 - **Login screen:** Set to same image under "Login Screen" settings.
+
+## Other customization
+
+- **Screenshotting:** Disabled super+shift+s shortcut for spectacle and enabled auto-select ('Accept on click-and-release'), then made a custom shortcut for super+shift+s that does the command `spectacle -r -b -c` which captures selection, adds to clipboard, and closes spectacle. 
