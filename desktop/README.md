@@ -30,6 +30,7 @@ _Last surveyed: 2026-10-20_
 - **AUR helper:** paru (only 2 AUR packages: `tela-icon-theme`, `jellyfin-desktop`)
 - **Shell:** fish (stock CachyOS config, nothing custom yet)
 - **Terminals installed:** Konsole, Alacritty, Ghostty (main)
+- **Ghostty config:** `~/.config/ghostty/config.ghostty`: TokyoNight Night theme (matches Starship), MesloLGS Nerd Font 12, padding 10/8, 92% opacity with blur. Check edits with `ghostty +validate-config`
 - **Prompt:** Starship (`pacman -S starship`, not the curl script), loaded via `starship init fish | source` in `~/.config/fish/config.fish`. Uses the Tokyo Night preset (`~/.config/starship.toml`). The preset has no CachyOS icon, so it showed a 🎗️ ribbon emoji; fixed by adding `CachyOS = "󰣇"` (Arch logo) under `[os.symbols]`. Needs a Nerd Font in the terminal
 - **Firewall:** ufw (enabled)
 - **Locale:** `en_DK.UTF-8` with Danish number/time/currency formats, US keyboard layout
