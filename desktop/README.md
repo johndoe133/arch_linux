@@ -46,7 +46,7 @@ _Last surveyed: 2026-10-20_
 - **Colors:** CachyOSNordLightly
 - **Application style:** Breeze
 - **Icons:** Tela-dark (installed via AUR `tela-icon-theme`, system-wide, so it also renders when logged out)
-- **Window decorations:** Breeze
+- **Window decorations:** Willow Dark Alt (to be more similar to Steam and Firefox decorations that can't be changed). Installed per-user in `~/.local/share/aurorae/themes/`, not from a package
 - **Cursor:** breeze_cursors, 24px
 - **Boot splash (Plymouth):** `cachyos` theme (`plymouth-set-default-theme`). Other installed options: `cachyos-bootanimation`, `spinner`, `bgrt`, …
 - **Splash screen (KSplash):** CachyOS-Nord
