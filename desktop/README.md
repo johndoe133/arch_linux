@@ -30,7 +30,7 @@ _Last surveyed: 2026-10-20_
 - **AUR helper:** paru (only 2 AUR packages: `tela-icon-theme`, `jellyfin-desktop`)
 - **Shell:** fish (stock CachyOS config, nothing custom yet)
 - **Terminals installed:** Konsole, Alacritty, Ghostty (main)
-- **Ghostty config:** `~/.config/ghostty/config.ghostty`: TokyoNight Night theme (matches Starship), MesloLGS Nerd Font 12, padding 10/8, 92% opacity with blur. Check edits with `ghostty +validate-config`
+- **Ghostty config:** `~/.config/ghostty/config.ghostty`: only `theme = TokyoNight Night` (matches Starship); everything else default (JetBrains Mono, no transparency, which I tried and didn't like). Check edits with `ghostty +validate-config`
 - **Prompt:** Starship (`pacman -S starship`, not the curl script), loaded via `starship init fish | source` in `~/.config/fish/config.fish`. Uses the Tokyo Night preset (`~/.config/starship.toml`). The preset has no CachyOS icon, so it showed a 🎗️ ribbon emoji; fixed by adding `CachyOS = "󰣇"` (Arch logo) under `[os.symbols]`. Needs a Nerd Font in the terminal
 - **Firewall:** ufw (enabled)
 - **Locale:** `en_DK.UTF-8` with Danish number/time/currency formats, US keyboard layout
@@ -48,7 +48,7 @@ _Last surveyed: 2026-10-20_
 - **Colors:** CachyOSNordLightly
 - **Application style:** Breeze
 - **Icons:** Tela-dark (installed via AUR `tela-icon-theme`, system-wide, so it also renders when logged out)
-- **Window decorations:** Willow Dark Alt (to be more similar to Steam and Firefox decorations that can't be changed). Installed per-user in `~/.local/share/aurorae/themes/`, not from a package
+- **Window decorations:** Plastik (built into KWin). Tried Willow Dark Alt (per-user in `~/.local/share/aurorae/themes/`), but it had alignment issues
 - **Cursor:** breeze_cursors, 24px
 - **Boot splash (Plymouth):** `cachyos` theme (`plymouth-set-default-theme`). Other installed options: `cachyos-bootanimation`, `spinner`, `bgrt`, …
 - **Splash screen (KSplash):** CachyOS-Nord
