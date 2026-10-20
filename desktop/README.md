@@ -40,7 +40,8 @@ _Last surveyed: 2026-10-20_
 
 - **Kernel cmdline:** stock: `quiet nowatchdog splash rw rootflags=subvol=/@ root=UUID=…`. Edit in `/etc/default/limine` (`KERNEL_CMDLINE[default]+=`), **not** in `/boot/limine.conf`, which gets regenerated
 - **Secure Boot:** set up with `sbctl`, using my own keys + **Microsoft vendor keys enrolled** (Windows and GPU option ROMs need them). `ENABLE_ENROLL_LIMINE_CONFIG=yes` signs/enrolls the Limine config hash. ⚠️ If a BIOS update or CMOS reset wipes keys → re-run `sudo sbctl enroll-keys -m` (or turn Secure Boot off temporarily)
-- **Limine timeout / quiet / remember_last_entry:** TODO: check `/boot/limine.conf` (needs root) and note anything changed from stock
+- **Limine menu** (`/boot/limine.conf`): `timeout: 120`, `default_entry: 2`, `remember_last_entry: yes`, CachyOS Limine theme. The long timeout is because the OLED monitor takes so long to show a picture that I'd miss the menu otherwise
+  - **Option, not done yet:** drop to `timeout: 5` and boot Windows straight from Linux with `sudo efibootmgr --bootnext 0000 && systemctl reboot` (`Boot0000` = Windows Boot Manager), which skips Limine once. For recovery, press an arrow key right after power-on to stop the countdown. Could also check the monitor's menu for Deep Sleep / DP power saving / auto input detection, which slow down waking
 
 ## Ricing/theming
 
