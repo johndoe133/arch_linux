@@ -9,7 +9,7 @@ Notes on how my CachyOS machines are set up and customized: the important change
   - [Changelog](laptop/changelog.md)
   - [Sleep & hibernate investigation](laptop/sleep-hibernate/investigation.md)
 
-[Packages to install](packages.md) on a fresh setup.
+[Packages to install](packages.md) and [VS Code settings](vscode/README.md) are shared by both machines.
 
 ## Conventions
 

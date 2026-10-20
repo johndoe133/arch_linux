@@ -1,0 +1,7 @@
+{
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+    "debug.console.fontFamily": "'JetBrainsMono Nerd Font'",
+    "chat.editor.fontFamily": "'JetBrainsMono Nerd Font'",
+    "scm.inputFontFamily": "editor"
+}

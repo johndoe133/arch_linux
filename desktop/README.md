@@ -29,7 +29,7 @@ _Last surveyed: 2026-10-20_
 - **GPU driver:** Mesa (open source, built in)
 - **AUR helper:** paru (only 2 AUR packages: `tela-icon-theme`, `jellyfin-desktop`)
 - **Shell:** fish (stock CachyOS config, nothing custom yet)
-- **Editor:** VS Code **OSS build** (`code` package, extensions from Open VSX). Settings in `~/.config/Code - OSS/User/settings.json`: editor, terminal, debug console, chat and commit-message box all use JetBrainsMono Nerd Font (`ttf-jetbrains-mono-nerd`). The OSS build has no Settings Sync, so signing in to GitHub does not sync settings
+- **Editor:** VS Code **OSS build** (`code` package, extensions from Open VSX). Settings tracked in [`vscode/`](../vscode/README.md) and symlinked to `~/.config/Code - OSS/User/settings.json`: editor, terminal, debug console, chat and commit-message box all use JetBrainsMono Nerd Font (`ttf-jetbrains-mono-nerd`). The OSS build has no Settings Sync, so signing in to GitHub does not sync settings; this repo does instead
 - **Terminals installed:** Konsole, Alacritty, Ghostty (main)
 - **Ghostty config:** `~/.config/ghostty/config.ghostty`: only `theme = TokyoNight Night` (matches Starship); everything else default (JetBrains Mono, no transparency, which I tried and didn't like). Check edits with `ghostty +validate-config`
 - **Prompt:** Starship (`pacman -S starship`, not the curl script), loaded via `starship init fish | source` in `~/.config/fish/config.fish`. Uses the Tokyo Night preset (`~/.config/starship.toml`). The preset has no CachyOS icon, so it showed a 🎗️ ribbon emoji; fixed by adding `CachyOS = "󰣇"` (Arch logo) under `[os.symbols]`. Needs a Nerd Font in the terminal
