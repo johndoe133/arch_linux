@@ -12,8 +12,8 @@ _Last surveyed: 2026-10-20_
   - Lexar NM790 2TB (`nvme0n1`): Linux. 4GB FAT32 ESP at `/boot` + btrfs for everything else
   - WD_BLACK SN7100 1TB (`nvme1n1`): **Windows** (its own ESP + NTFS). Dual boot
 - **Displays:**
-  - DP-1: 2560×1440 @ 125% scale (main, left)
-  - HDMI-A-1: 1920×1080 @ 100% (right)
+  - DP-1: **Acer Predator X27U F5** OLED, 2560×1440 @ 125% scale (main, left). Slow to show a picture at boot (see Limine menu below)
+  - HDMI-A-1: Samsung SyncMaster BX2431, 1920×1080 @ 100% (right)
 - **Boot mode:** UEFI, **Secure Boot ON**
 
 ## OS & Desktop
