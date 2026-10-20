@@ -71,3 +71,4 @@ _Last surveyed: 2026-10-20_
 - `/etc/plasmalogin.conf` has an `[Autologin]` section with only `Session=plasma` and no `User=`, so autologin is not actually active
 - `plasma-org.kde.plasma.desktop-appletsrc` references `/home/lara/Imágenes/…`, a leftover from the CachyOS default layout. Harmless
 - iGPU is enabled. Could disable in BIOS if it causes issues; leave it on if using it for display outputs or encoding
+- **Ghostty "Launching Ghostty (Failed) / Remote peer disconnected":** systemd 262 refuses to start Ghostty's D-Bus service when it hasn't installed its SIGUSR2 handler yet (startup race, [ghostty#14398](https://github.com/ghostty-org/ghostty/issues/14398)). Workaround: `~/.config/systemd/user/app-com.mitchellh.ghostty.service.d/override.conf` with `Type=notify` and `ExecReload=/bin/kill -USR2 $MAINPID`, then `systemctl --user daemon-reload`. **Remove the override once Ghostty is 1.4+** (official fix ships there)
