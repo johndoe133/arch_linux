@@ -1,6 +1,6 @@
 # Claims, Corrections & Open Threads
 
-**Updated 2026-08-20 22:45.** Companion files: `system_context.txt`, `change_log.md`.
+**Updated 2026-08-20 22:45.** Companion files: [`../system-snapshot-2026-08-20.md`](../system-snapshot-2026-08-20.md), [`../changelog.md`](../changelog.md).
 
 ---
 
@@ -150,5 +150,5 @@ is not a confounding variable.
 ### Dropped to stay at five
 - **The lid-closed rollback bisect (kernel bug 218634).** Its designated positive control
   is dead (Correction 21), so it needs a new instrument before it can even be approached
-  — and thread 2 may make it moot. Full description retained in `system_context.txt` §6.5.
+  — and thread 2 may make it moot. Full description retained in [`../system-snapshot-2026-08-20.md`](../system-snapshot-2026-08-20.md) §6.5.
 - **Hybrid-sleep.** Withdrawn on the SSD-write constraint (Correction 30), not deferred.

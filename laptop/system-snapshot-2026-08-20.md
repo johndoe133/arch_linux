@@ -3,7 +3,7 @@
 **Regenerated 2026-08-20 22:45**, after a full OS reinstall. Every line is either
 observed on the current install or explicitly marked UNVERIFIED / hearsay.
 The pre-reinstall version of this file contained ten documented errors; do not
-reuse it. Companion files: `change_log.md`, `claims_corrections_threads.md`.
+reuse it. Companion files: [`changelog.md`](changelog.md), [`sleep-hibernate/claims-corrections.md`](sleep-hibernate/claims-corrections.md).
 
 ---
 

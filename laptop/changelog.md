@@ -2,8 +2,8 @@
 
 **Updated 2026-08-21 10:00.** No changes applied 08-21; testing only.
 **The invariant: if it is not in this table, it is not on the system.**
-IDs are flat integers, never reused. Companion files: `system_context.txt`,
-`claims_corrections_threads.md` (corrections now run to #54).
+IDs are flat integers, never reused. Companion files: [`system-snapshot-2026-08-20.md`](system-snapshot-2026-08-20.md),
+[`sleep-hibernate/claims-corrections.md`](sleep-hibernate/claims-corrections.md) (corrections now run to #54).
 
 ⚠️ **Nothing on this system has a measured *power* benefit.** The change that
 allegedly produced one (`NVreg_EnableS0ixPowerManagement=1`, "0.81 → 0.58 W") is not
