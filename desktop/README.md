@@ -2,6 +2,8 @@
 
 _Last surveyed: 2026-10-20_
 
+See also: [CS2 + display tweaks](cs2-display-tweaks.md) (launch options, 500 Hz flicker fix).
+
 ## Hardware
 
 - **Motherboard:** Gigabyte B650 EAGLE AX (BIOS F37, 2025-12-17)
@@ -11,9 +13,9 @@ _Last surveyed: 2026-10-20_
 - **Storage:**
   - Lexar NM790 2TB (`nvme0n1`): Linux. 4GB FAT32 ESP at `/boot` + btrfs for everything else
   - WD_BLACK SN7100 1TB (`nvme1n1`): **Windows** (its own ESP + NTFS). Dual boot
-- **Displays:**
-  - DP-1: **Acer Predator X27U F5** OLED, 2560×1440 @ 125% scale (main, left). Slow to show a picture at boot (see Limine menu below). **Quick Start Mode: On** (monitor menu → System; default Off) to make it wake faster
-  - HDMI-A-1: Samsung SyncMaster BX2431, 1920×1080 @ 100% (right)
+- **Displays:** (both on the 9070 XT; the iGPU has no monitor attached)
+  - DP-1: **Acer Predator X27U F5** OLED, 2560×1440 @ 500 Hz, 125% scale (main, left). Slow to show a picture at boot (see Limine menu below). **Quick Start Mode: On** (monitor menu → System; default Off) to make it wake faster
+  - DP-2: **LG 27UP650** 4K @ 60 Hz, 125% scale (right). Replaced the Samsung SyncMaster BX2431 1080p. Was on the iGPU and flickered; fine on the dGPU (tentative). See [CS2 + display tweaks](cs2-display-tweaks.md)
 - **Boot mode:** UEFI, **Secure Boot ON**
 
 ## OS & Desktop
@@ -35,6 +37,15 @@ _Last surveyed: 2026-10-20_
 - **Prompt:** Starship (`pacman -S starship`, not the curl script), loaded via `starship init fish | source` in `~/.config/fish/config.fish`. Uses the Tokyo Night preset (`~/.config/starship.toml`). The preset has no CachyOS icon, so it showed a 🎗️ ribbon emoji; fixed by adding `CachyOS = "󰣇"` (Arch logo) under `[os.symbols]`. Needs a Nerd Font in the terminal
 - **Firewall:** ufw (enabled)
 - **Locale:** `en_DK.UTF-8` with Danish number/time/currency formats, US keyboard layout
+
+## Key versions (checked 2026-11-07, `checkupdates` = nothing pending)
+
+- **Kernel:** installed `linux-cachyos` 7.3.3-1, **running 7.3.1-1** (built 2026-10-31). The mismatch is just a pending reboot, not a missing update. Check with `uname -r` vs `pacman -Q linux-cachyos`
+- **Graphics:** `mesa` / `vulkan-radeon` (+ `lib32-` versions) 26.2.6-1, `linux-firmware` 20261019-1
+- **Desktop:** KDE Plasma 6.8.2 (`kwin`, `plasma-desktop`, `plasma-login-manager`), `xorg-xwayland` 24.1.14
+- **Boot:** `limine` 12.9.6, `mkinitcpio` 42.2, `systemd` 262.1; BIOS F37
+- **Apps:** `lact` 0.10.1, `steam` 1.0.0.87, `ghostty` 1.4.0, `sdl3` 3.4.18, `sdl2-compat` 2.32.74
+- ~1330 packages installed. Everything is current; if an assistant says to update, run `checkupdates` first
 
 ## Boot options
 
@@ -62,7 +73,7 @@ _Last surveyed: 2026-10-20_
 
 ## Other customization
 
-- **Display scaling:** 125% on main monitor; XWayland apps scale themselves (`kwinrc [Xwayland] Scale=1.25`)
+- **Display scaling:** 125% on both monitors; XWayland apps scale themselves (`kwinrc [Xwayland] Scale=1.25`)
 - **Gaming:** Steam games have `.desktop` launchers in `~/.local/share/applications`; `lsfg-vk` (Lossless Scaling frame-gen) UI installed
 - **Services I rely on:** `ananicy-cpp`, `ufw`, `bluetooth`, `limine-snapper-sync`, `snapper-cleanup.timer`, `fstrim.timer`, `cachyos-rate-mirrors.timer`, user `arch-update.timer`
 - **Screenshotting:** enabled 'Accept on click-and-release' in Spectacle, then made a custom shortcut for Super+Shift+S that runs `spectacle -r -b -c` (captures selection, adds to clipboard, closes Spectacle). Stored in `~/.local/share/applications/net.local.spectacle.desktop`. Spectacle's own launch shortcut stays on Print
